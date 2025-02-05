@@ -1,10 +1,7 @@
-# ADNI_QPP_Templates
-Collection of QPPs and Figure Generation for EMBC 2025 Submission
+# Widespread Spatiotemporal Patterns of Functional Brain Networks in Longitudinal Progression of Alzheimer’s Disease
 
-## Title
-**Widespread Spatiotemporal Patterns of Functional Brain Networks in Longitudinal Progression of Alzheimer’s Disease**
+Repository corresponding to EMBC 2025 submission. 
 
-## Visual
 ![Visualization](figures/ADNI_FULL_QPP_visualization.gif)
 
 ## Abstract

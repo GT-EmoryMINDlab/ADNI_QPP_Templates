@@ -1,55 +1,10 @@
 
-%% Downsample
-data = BSNIPS12_NC_QPP;
-% Assuming your matrix is called 'data' with size 256x33
-roi_count = size(data, 1);
-new_time_points = 16;
-
-% Calculate the window size (how many columns to average)
-window_size = floor(size(data, 2) / new_time_points);
-
-% Initialize the new matrix
-downsampled_data = zeros(roi_count, new_time_points);
-
-% Loop through and average the windows
-for i = 1:new_time_points
-    start_idx = (i - 1) * window_size + 1;
-    end_idx = min(i * window_size, size(data, 2));
-    downsampled_data(:, i) = mean(data(:, start_idx:end_idx), 2);
-end
-
-disp('Downsampled data:');
-disp(downsampled_data);
-
-BSNIPS12_NC_DS_QPP = downsampled_data;
-
-
-%% Upsample
-
-data = BSNIPS12_NC_QPP; % Assuming your matrix is called 'data' with size 256x33
-roi_count = size(data, 1);
-new_time_points = 66; % Define the desired number of time points
-
-% Create the old and new time points for interpolation
-original_time_points = linspace(1, size(data, 2), size(data, 2));
-new_time_points_vec = linspace(1, size(data, 2), new_time_points);
-
-% Initialize the upsampled matrix
-upsampled_data = zeros(roi_count, new_time_points);
-
-% Loop through each row (ROI) and interpolate
-for i = 1:roi_count
-    upsampled_data(i, :) = interp1(original_time_points, data(i, :), new_time_points_vec, 'cubic');
-end
-
-disp('Upsampled data:');
-disp(upsampled_data);
-
-BSNIPS12_NC_US_QPP = upsampled_data;
 
 %%
+
+
 % Define the matrices
-GrpSn = ADNI_ALL_DATA_CONCAT_D1; % Replace with your time series matrix
+GrpSn = ADNI_NC_D1; % Replace with your time series matrix
 qpp = ADNI_uNC_pre_QPP_rev(:,5:12);    % Replace with your pattern template
 trrr = 3;
 corr_thresh = 0.2;
@@ -178,7 +133,7 @@ SM_rois = 55:68;
 HC_rois = 69:90;
 TN_rois = 91:105;
 
-% QPP templates
+% define QPP templates that you wish to compare
 QPP_templates = {HCP_NC_long_QPP, ADNI_DAT_US_QPP, ADNI_MCI_US_QPP, ADNI_NC_US_QPP};
 
 % Predefine storage for all networks across templates
@@ -313,7 +268,7 @@ B = corr(ADNI_pMCI_post_QPP(:,5:12)', ADNI_pMCI_post_QPP(:,5:12)');
 A_minus_B = A-B;
 
 
-%{
+
 figure,
 
 subplot(1,3,1), 
@@ -336,7 +291,7 @@ axis off;
 
 
 colormap('jet')
-%}
+
 
 % Assuming you have a vector of variances, one per network
 network_variances = var(A_minus_B, 0, 2); % Row-wise variance of A - B

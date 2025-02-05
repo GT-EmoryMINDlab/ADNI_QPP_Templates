@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="figures/ADNI_FULL_QPP_visualization.gif" alt="Visualization" width="100%>
+  <img src="figures/ADNI_FULL_QPP_visualization.gif" alt="Visualization">
 
 </p>
 

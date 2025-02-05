@@ -99,3 +99,12 @@ Below are example outputs from each section:
   ![Dwell Time Histogram](plots/m3_dwell_time_histogram.png)
 
 
+---
+
+## **4️⃣ Python Data Visualization**
+📜 **Script:** `python_data_visualization.ipynb`  
+📊 **Purpose:** This **standalone Jupyter Notebook** provides additional visualization for the **longitudinal dataset**.  
+It focuses on:
+- **Graphing projection values** over time.
+- **Visualizing changes** in QPP occurrences across different conditions.
+- **Comparing QPP activity** across different ADNI cohorts.

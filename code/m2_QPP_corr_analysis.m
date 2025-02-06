@@ -1,4 +1,28 @@
 %% ========================================================================
+%  QPP Correlation and Statistical Analysis Script (Main Script 2)
+%  ========================================================================
+%  This script aggregates Quasi-Periodic Pattern (QPP) templates across 
+%  different cohorts and computes correlation matrices for each template. 
+%  It also performs statistical analyses to compare network-level 
+%  variations and visualize differences across templates.
+%
+%  Key Features:
+%  - Loads QPP templates dynamically from a predefined structure.
+%  - Computes correlation matrices across all 105 networks in each template.
+%  - Visualizes the correlation matrix using color-coded plots.
+%  - Compares network correlations between selected QPP templates.
+%  - Computes variance across networks and identifies statistically 
+%    significant differences.
+%  - Performs statistical tests (Kruskal-Wallis, Dunn-Sidak, Mann-Whitney U).
+%  - Visualizes the correlation differences across intrinsic connectivity 
+%    networks (ICNs).
+%
+%  Author: Theodore J. LaGrow
+%  Created on: 09/25/2024
+%  Last Updated: 02/06/2025
+% ========================================================================
+
+%% ========================================================================
 %  Compute and Display Correlation Matrix Across All QPP Templates
 %  ========================================================================
 %  This script aggregates QPP templates from different cohorts and 

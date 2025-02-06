@@ -1,5 +1,5 @@
 %% ========================================================================
-%  QPP Waveform Visualization Script (Main Script 3)
+%  QPP Waveform Visualization Script (Main Script 1)
 %  ========================================================================
 %  This script loads, processes, and visualizes Quasi-Periodic Patterns 
 %  (QPPs) from precomputed .mat files. It focuses on analyzing Neuromark 
@@ -14,7 +14,7 @@
 %
 %  Author: Theodore J. LaGrow
 %  Created on: 09/25/2024
-%  Last Updated: 02/05/2025
+%  Last Updated: 02/06/2025
 % ========================================================================
 
 %% ========================================================================

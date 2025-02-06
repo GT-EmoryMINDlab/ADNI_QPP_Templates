@@ -111,8 +111,8 @@ It focuses on:
 ### **Example Outputs**
 - **Longitudinal Transition Point Graph**  
   *Visual representation of longitudinal changes in QPP projection values.*  
-  ![Longitudinal Transition Point Graph](../figures/figure_2_v5.png)
+  ![Longitudinal Transition Point Graph](../figures/figure_2_v5.PNG)
 
 - **QPP Projection Results**  
   *QPP projection analysis across different timepoints and conditions.*  
-  ![QPP Projection Results](../figures/figure_6_v3.png)
+  ![QPP Projection Results](../figures/figure_6_v3.PNG)
